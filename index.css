@@ -23,6 +23,7 @@ header {
   padding-top: 10px;
 }
 .logo-image {
+  margin-left: 5px;
   width: 50px;
   height: 50px;
 }
@@ -35,9 +36,17 @@ header {
   display: flex;
   justify-content: flex-start;
 }
+@media (max-width: 840px) {
+  #nav-bar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
 .nav-link {
   padding: 0px 40px 0px 40px;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   text-decoration: none;
 }
@@ -65,12 +74,45 @@ header {
 .title-container h2 {
   margin-top: 0px;
 }
+.signup {
+  position: absolute;
+  width: 375px;
+  height: 400px;
+  background-color: rgba(255, 255, 153, 0.93);
+  color: black;
+  margin-top: 100px;
+  margin-left: 800px;
+}
+.signup h2 {
+  text-align: center;
+}
+.form-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.form-input {
+  width: 145px;
+  height: 40px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.email .form-input, .number .form-input, .address .form-input {
+  width: 321px;
+}
+#submit {
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
 .about-section {
   background-color: white;
-  height: 650px;
+  height: auto;
   position: relative;
 }
-#about {
+#about{
   position: absolute;
   width: 0;
   height: 0;
@@ -91,6 +133,15 @@ iframe {
   width: 600px;
   font-family: arial;
 }
+@media (max-width: 1000px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 600px;
+    font-family: arial;
+  }
+}
 .about-container img {
   width: 600px;
   height: 400px;
@@ -98,4 +149,42 @@ iframe {
 }
 .about-container div {
   margin-left: 25px;
+}
+.program-section {
+  margin-top: 50px;
+  width: auto;
+  height: 550px;
+  position: relative;
+}
+.program-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.program-title {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 70px;
+}
+.monthly, .personal, .group {
+  text-align: center;
+  border-style: solid;
+  width: 300px;
+  height: 300px;
+}
+.monthly p, .personal p, .group p {
+  font-size: 20px;
+}
+.monthly-input, .group-input {
+  margin-top: 47px;
+}
+.monthly-input, .personal-input, .group-input {
+  width: 100px;
+  padding: 20px 20px;
+  font-size: 30px;
+}
+#programs {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: -80px;
 }
